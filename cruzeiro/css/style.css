@@ -1,0 +1,221 @@
+/* Cruzeiro */
+:root {
+    --azul-escuro: #002f6c;
+    --azul-medio: #00428d;
+    --azul-claro: #0050b3;
+    --branco: #fff;
+    --cinza-fundo: #f0f2f5;
+    --cinza-claro: #e9ecef;
+    --texto-escuro: #212529;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--cinza-fundo);
+    color: var(--texto-escuro);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column; 
+    min-height: 100vh; 
+}
+
+/* Cabeçalho */
+header {
+    background: linear-gradient(135deg, var(--azul-escuro), var(--azul-claro));
+    padding: 2.5rem 1rem;
+    text-align: center;
+    color: var(--branco);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.5rem, 6vw, 3.8rem);
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+
+main {
+    max-width: 1100px;
+    margin: 2.5rem auto;
+    display: grid;
+    gap: 2rem;
+    padding: 0 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    flex-grow: 1; 
+}
+
+.card {
+    background: var(--branco);
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--cinza-claro);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+/* Cabeçalho do card */
+.card-header {
+    background: linear-gradient(90deg, var(--azul-escuro), var(--azul-medio));
+    color: var(--branco);
+    padding: 1.2rem;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    text-align: center;
+    border-bottom: 2px solid var(--azul-claro);
+    letter-spacing: 0.5px;
+}
+
+/* card */
+.card-body {
+    padding: 1.5rem 1rem;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.teams {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+}
+
+.team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    min-width: 120px;
+    padding: 0.5rem;
+}
+
+.team img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 50%;
+    background: var(--branco);
+    padding: 5px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    border: 2px solid var(--azul-claro);
+    transition: transform 0.2s ease;
+}
+
+.team img:hover {
+    transform: scale(1.05);
+}
+
+.team-name {
+    margin-top: 0.8rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: var(--azul-escuro);
+}
+
+.vs {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--azul-medio);
+    margin: 0 1rem;
+}
+
+/* Rodapé do card */
+.card-footer {
+    background: var(--cinza-claro);
+    padding: 1rem;
+    font-size: 1rem;
+    text-align: center;
+    color: var(--texto-escuro);
+    border-top: 1px solid #dee2e6;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background: var(--azul-escuro);
+    color: var(--branco);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 2rem; 
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.2); 
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.social-links {
+    margin-top: 1rem;
+}
+
+.social-links a {
+    color: var(--branco);
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+.social-links a:hover {
+    color: var(--azul-claro); 
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+
+    .card-header {
+        font-size: 1.6rem;
+    }
+
+    .team img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .team-name {
+        font-size: 1rem;
+    }
+
+    .vs {
+        font-size: 1.5rem;
+    }
+
+    .card-footer {
+        font-size: 0.9rem;
+    }
+
+    footer {
+        padding: 1rem 0.5rem;
+    }
+
+    footer p {
+        font-size: 0.85rem;
+    }
+}
