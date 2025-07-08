@@ -4,7 +4,7 @@
     --azul-medio: #00428d;
     --azul-claro: #0050b3;
     --branco: #fff;
-    --cinza-fundo: #f0f2f5;
+    --azul-fundo: #003c81;
     --cinza-claro: #e9ecef;
     --texto-escuro: #212529;
 }
@@ -17,7 +17,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: var(--cinza-fundo);
+    background: var(--azul-fundo);
     color: var(--texto-escuro);
     line-height: 1.6;
     display: flex;
@@ -71,7 +71,6 @@ main {
     box-shadow: 0 12px 25px rgba(0,0,0,0.25);
 }
 
-/* Cabeçalho do card */
 .card-header {
     background: linear-gradient(90deg, var(--azul-escuro), var(--azul-medio));
     color: var(--branco);
@@ -83,7 +82,6 @@ main {
     letter-spacing: 0.5px;
 }
 
-/* card */
 .card-body {
     padding: 1.5rem 1rem;
     text-align: center;
@@ -141,7 +139,6 @@ main {
     margin: 0 1rem;
 }
 
-/* Rodapé do card */
 .card-footer {
     background: var(--cinza-claro);
     padding: 1rem;
@@ -152,7 +149,6 @@ main {
     font-weight: bold;
 }
 
-/* Footer */
 footer {
     background: var(--azul-escuro);
     color: var(--branco);
